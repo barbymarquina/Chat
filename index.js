@@ -13,11 +13,11 @@ const server = app.listen(app.get('port'), () => {
     console.log('server on port', app.get('port'));
 });
 
+//websockets
+
 const socketIO= require('socket.io');
 const io = socketIO(server);
 
-
-//websockets
 io.on('connection', (socket) =>{
     console.log('new conection', socket.id);
 
